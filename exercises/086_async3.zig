@@ -13,8 +13,10 @@ pub fn main() void {
     const n = 5;
     var foo_frame = async foo(n);
 
-    ???
-
+    var idx : u8 = n;
+    while(idx>0) : (idx-=1) {
+        resume foo_frame;
+    }
     print("\n", .{});
 }
 
