@@ -19,12 +19,11 @@ pub fn main() void {
         resume foo_frame;
     }
 
-    print("\n", .{});
 }
 
 fn foo() void {
     while (true) {
-        global_counter -= 1;
+        global_counter += 1;
         suspend{}
     }
 }
